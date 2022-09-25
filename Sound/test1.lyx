@@ -1,0 +1,886 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+\backslash
+documentclass[journal,12pt,twocolumn]{IEEEtran}
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+usepackage{setspace} 
+\backslash
+usepackage{gensymb} 
+\backslash
+singlespacing 
+\backslash
+usepackage[cmex10]{amsmath}
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+usepackage{amsthm}
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+usepackage{mathrsfs} 
+\backslash
+usepackage{txfonts} 
+\backslash
+usepackage{stfloats} 
+\backslash
+usepackage{bm} 
+\backslash
+usepackage{cite} 
+\backslash
+usepackage{cases} 
+\backslash
+usepackage{subfig}
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+usepackage{longtable} 
+\backslash
+usepackage{multirow}
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+usepackage{enumitem} 
+\backslash
+usepackage{mathtools} 
+\backslash
+usepackage{steinmetz} 
+\backslash
+usepackage{tikz} 
+\backslash
+usepackage{circuitikz} 
+\backslash
+usepackage{verbatim} 
+\backslash
+usepackage{tfrupee} 
+\backslash
+usepackage[breaklinks=true]{hyperref} 
+\backslash
+usepackage{graphicx} 
+\backslash
+usepackage{tkz-euclide}
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+usetikzlibrary{calc,math} 
+\backslash
+usepackage{listings} 
+\backslash
+usepackage{color} %% 
+\backslash
+usepackage{array} %% 
+\backslash
+usepackage{longtable} %% 
+\backslash
+usepackage{calc} %% 
+\backslash
+usepackage{multirow} %% 
+\backslash
+usepackage{hhline} %% 
+\backslash
+usepackage{ifthen} %% 
+\backslash
+usepackage{lscape} 
+\backslash
+usepackage{multicol} 
+\backslash
+usepackage{chngcntr}
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+DeclareMathOperator*{
+\backslash
+Res}{Res}
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+renewcommand
+\backslash
+thesection{
+\backslash
+arabic{section}} 
+\backslash
+renewcommand
+\backslash
+thesubsection{
+\backslash
+thesection.
+\backslash
+arabic{subsection}} 
+\backslash
+renewcommand
+\backslash
+thesubsubsection{
+\backslash
+thesubsection.
+\backslash
+arabic{subsubsection}}
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+renewcommand
+\backslash
+thesectiondis{
+\backslash
+arabic{section}} 
+\backslash
+renewcommand
+\backslash
+thesubsectiondis{
+\backslash
+thesectiondis.
+\backslash
+arabic{subsection}} 
+\backslash
+renewcommand
+\backslash
+thesubsubsectiondis{
+\backslash
+thesubsectiondis.
+\backslash
+arabic{subsubsection}}
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+hyphenation{op-tical net-works semi-conduc-tor} 
+\backslash
+def
+\backslash
+inputGnumericTable{} %%
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+lstset{ %language=C, frame=single, breaklines=true, columns=fullflexible
+ } 
+\backslash
+begin{document}
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+newtheorem{theorem}{Theorem}[section] 
+\backslash
+newtheorem{problem}{Problem} 
+\backslash
+newtheorem{proposition}{Proposition}[section] 
+\backslash
+newtheorem{lemma}{Lemma}[section] 
+\backslash
+newtheorem{corollary}[theorem]{Corollary} 
+\backslash
+newtheorem{example}{Example}[section] 
+\backslash
+newtheorem{definition}[problem]{Definition}
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+newcommand{
+\backslash
+BEQA}{
+\backslash
+begin{eqnarray}} 
+\backslash
+newcommand{
+\backslash
+EEQA}{
+\backslash
+end{eqnarray}} 
+\backslash
+newcommand{
+\backslash
+define}{
+\backslash
+stackrel{
+\backslash
+triangle}{=}} 
+\backslash
+bibliographystyle{IEEEtran} 
+\backslash
+raggedbottom 
+\backslash
+setlength{
+\backslash
+parindent}{0pt} 
+\backslash
+providecommand{
+\backslash
+mbf}{
+\backslash
+mathbf} 
+\backslash
+providecommand{
+\backslash
+pr}[1]{
+\backslash
+ensuremath{
+\backslash
+Pr
+\backslash
+left(#1
+\backslash
+right)}} 
+\backslash
+providecommand{
+\backslash
+qfunc}[1]{
+\backslash
+ensuremath{Q
+\backslash
+left(#1
+\backslash
+right)}} 
+\backslash
+providecommand{
+\backslash
+sbrak}[1]{
+\backslash
+ensuremath{{}
+\backslash
+left[#1
+\backslash
+right]}} 
+\backslash
+providecommand{
+\backslash
+lsbrak}[1]{
+\backslash
+ensuremath{{}
+\backslash
+left[#1
+\backslash
+right.}} 
+\backslash
+providecommand{
+\backslash
+rsbrak}[1]{
+\backslash
+ensuremath{{}
+\backslash
+left.#1
+\backslash
+right]}} 
+\backslash
+providecommand{
+\backslash
+brak}[1]{
+\backslash
+ensuremath{
+\backslash
+left(#1
+\backslash
+right)}} 
+\backslash
+providecommand{
+\backslash
+lbrak}[1]{
+\backslash
+ensuremath{
+\backslash
+left(#1
+\backslash
+right.}} 
+\backslash
+providecommand{
+\backslash
+rbrak}[1]{
+\backslash
+ensuremath{
+\backslash
+left.#1
+\backslash
+right)}} 
+\backslash
+providecommand{
+\backslash
+cbrak}[1]{
+\backslash
+ensuremath{
+\backslash
+left
+\backslash
+{#1
+\backslash
+right
+\backslash
+}}} 
+\backslash
+providecommand{
+\backslash
+lcbrak}[1]{
+\backslash
+ensuremath{
+\backslash
+left
+\backslash
+{#1
+\backslash
+right.}} 
+\backslash
+providecommand{
+\backslash
+rcbrak}[1]{
+\backslash
+ensuremath{
+\backslash
+left.#1
+\backslash
+right
+\backslash
+}}} 
+\backslash
+theoremstyle{remark} 
+\backslash
+newtheorem{rem}{Remark} 
+\backslash
+newcommand{
+\backslash
+sgn}{
+\backslash
+mathop{
+\backslash
+mathrm{sgn}}} 
+\backslash
+providecommand{
+\backslash
+abs}[1]{
+\backslash
+vert#1
+\backslash
+vert} 
+\backslash
+providecommand{
+\backslash
+res}[1]{
+\backslash
+Res
+\backslash
+displaylimits_{#1}} 
+\backslash
+providecommand{
+\backslash
+norm}[1]{
+\backslash
+lVert#1
+\backslash
+rVert} %
+\backslash
+providecommand{
+\backslash
+norm}[1]{
+\backslash
+lVert#1
+\backslash
+rVert} 
+\backslash
+providecommand{
+\backslash
+mtx}[1]{
+\backslash
+mathbf{#1}} 
+\backslash
+providecommand{
+\backslash
+mean}[1]{E[ #1 ]} 
+\backslash
+providecommand{
+\backslash
+fourier}{
+\backslash
+overset{
+\backslash
+mathcal{F}}{ 
+\backslash
+rightleftharpoons}} %
+\backslash
+providecommand{
+\backslash
+hilbert}{
+\backslash
+overset{
+\backslash
+mathcal{H}}{ 
+\backslash
+rightleftharpoons}} 
+\backslash
+providecommand{
+\backslash
+system}{
+\backslash
+overset{
+\backslash
+mathcal{H}}{ 
+\backslash
+longleftrightarrow}} %
+\backslash
+newcommand{
+\backslash
+solution}[2]{
+\backslash
+textbf{Solution:}{#1}} 
+\backslash
+newcommand{
+\backslash
+solution}{
+\backslash
+noindent 
+\backslash
+textbf{Solution: }} 
+\backslash
+newcommand{
+\backslash
+cosec}{
+\backslash
+,
+\backslash
+text{cosec}
+\backslash
+,} 
+\backslash
+providecommand{
+\backslash
+dec}[2]{
+\backslash
+ensuremath{
+\backslash
+overset{#1}{
+\backslash
+underset{#2}{
+\backslash
+gtrless}}}} 
+\backslash
+newcommand*{
+\backslash
+permcomb}[4][0mu]{{{}^{#3}
+\backslash
+mkern#1#2_{#4}}} 
+\backslash
+newcommand*{
+\backslash
+perm}[1][-3mu]{
+\backslash
+permcomb[#1]{P}} 
+\backslash
+newcommand*{
+\backslash
+comb}[1][-1mu]{
+\backslash
+permcomb[#1]{C}} 
+\backslash
+newcommand{
+\backslash
+myvec}[1]{
+\backslash
+ensuremath{
+\backslash
+begin{pmatrix}#1
+\backslash
+end{pmatrix}}} 
+\backslash
+newcommand{
+\backslash
+mydet}[1]{
+\backslash
+ensuremath{
+\backslash
+begin{vmatrix}#1
+\backslash
+end{vmatrix}}} 
+\backslash
+numberwithin{equation}{subsection} 
+\backslash
+makeatletter 
+\backslash
+@addtoreset{figure}{problem} 
+\backslash
+makeatother 
+\backslash
+let
+\backslash
+StandardTheFigure
+\backslash
+thefigure 
+\backslash
+let
+\backslash
+vec
+\backslash
+mathbf 
+\backslash
+renewcommand{
+\backslash
+thefigure}{
+\backslash
+theproblem} 
+\backslash
+def
+\backslash
+putbox#1#2#3{
+\backslash
+makebox[0in][l]{
+\backslash
+makebox[#1][l]{}
+\backslash
+raisebox{
+\backslash
+baselineskip}[0in][0in]{
+\backslash
+raisebox{#2}[0in][0in]{#3}}}} 
+\backslash
+def
+\backslash
+rightbox#1{
+\backslash
+makebox[0in][r]{#1}} 
+\backslash
+def
+\backslash
+centbox#1{
+\backslash
+makebox[0in]{#1}} 
+\backslash
+def
+\backslash
+topbox#1{
+\backslash
+raisebox{-
+\backslash
+baselineskip}[0in][0in]{#1}} 
+\backslash
+def
+\backslash
+midbox#1{
+\backslash
+raisebox{-0.5
+\backslash
+baselineskip}[0in][0in]{#1}} 
+\backslash
+vspace{3cm} 
+\backslash
+title{Assignment 2} 
+\backslash
+author{Raghav Juyal - EP20BTECH11018} 
+\backslash
+maketitle 
+\backslash
+newpage 
+\backslash
+bigskip 
+\backslash
+renewcommand{
+\backslash
+thefigure}{
+\backslash
+theenumi} 
+\backslash
+renewcommand{
+\backslash
+thetable}{
+\backslash
+theenumi} Download all python codes from 
+\backslash
+begin{lstlisting} https://github.com/RaghavJuyal/AI1103/blob/main/Assignment2/Cod
+es/Assignment2.py 
+\backslash
+end{lstlisting} % and latex-tikz codes from % 
+\backslash
+begin{lstlisting} https://github.com/RaghavJuyal/AI1103/tree/main/Assignment2/Ass
+ignment2.tex 
+\backslash
+end{lstlisting} 
+\backslash
+section*{Question 17, GATE CS 2020} Let $
+\backslash
+mathcal{R}$ be the set of all binary relations on the set $
+\backslash
+{1,2,3
+\backslash
+}$.
+ Suppose a relation is chosen from $
+\backslash
+mathcal{R}$ at random.
+ The probability that the chosen relation is reflexive is? 
+\backslash
+section*{Solution} Let $A$ be a set of n numbers.
+ No.
+ of pairs formed from elements of $A$:
+\backslash
+
+\backslash
+ 
+\backslash
+begin{align} 
+\backslash
+comb{n}{1} 
+\backslash
+times 
+\backslash
+comb{n}{1} = n^2
+\backslash
+label{eq1} 
+\backslash
+end{align} 
+\backslash
+
+\backslash
+For each pair we have 2 choices, whether to include it in the relation or
+ not.
+ 
+\backslash
+
+\backslash
+$
+\backslash
+therefore$ Number of binary relations on $A$:
+\backslash
+
+\backslash
+ 
+\backslash
+begin{align} 2
+\backslash
+times2
+\backslash
+times...
+\backslash
+text{ $n^{2}$ times } = 2^{n^2}
+\backslash
+label{eq2} 
+\backslash
+end{align} 
+\backslash
+begin{definition} A reflexive relation is one in which every element maps
+ to itself, i.e., a relation $R$ on set $A$ is reflexive if $(a,a) 
+\backslash
+in R
+\backslash
+; 
+\backslash
+forall
+\backslash
+; a 
+\backslash
+in A$.
+ 
+\backslash
+end{definition} For example, consider the set $A$
+\backslash
+hspace{0.2cm}=
+\backslash
+hspace{0.2cm}$
+\backslash
+{1,2,3
+\backslash
+}$.
+ A possible reflexive relation on $A$ is $R_1$
+\backslash
+hspace{0.2cm}=
+\backslash
+hspace{0.2cm}$
+\backslash
+{(1,1), (2,2), (3,3), (1,2), (2,3)
+\backslash
+}$ as every element in $A$ is related to itself in $R_1$ while relation
+ $R_2$
+\backslash
+hspace{0.2cm}=
+\backslash
+hspace{0.2cm}$
+\backslash
+{(1,1),(2,2),(1,2)
+\backslash
+}$ is not a reflexive relation on $A$ as 3 $
+\backslash
+in A$ but $(3,3) 
+\backslash
+notin R_2$.
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Standard
+In a reflexive relation, out of the $n^2$ pairs 
+\backslash
+eqref{eq1}, n have to be included (n pairs of the form (a,a)) which means
+ there is only 1 way to include them.
+ For the remaining $n^2-n$ pairs we have 2 choices, whether to include it
+ in the relation or not.
+\backslash
+
+\backslash
+ $
+\backslash
+therefore$ Number of reflexive relations are:
+\backslash
+
+\backslash
+ 
+\backslash
+begin{align} 1
+\backslash
+times2^{n^{2}-n} = 2^{n^{2}-n} 
+\backslash
+label{eq3} 
+\backslash
+end{align} 
+\backslash
+
+\backslash
+ Let $X 
+\backslash
+in 
+\backslash
+{0,1
+\backslash
+}$ be a random variable where 0 represents reflexive relation chosen from
+ $
+\backslash
+mathcal{R}$ and 1 represents non-reflexive relation chosen from $
+\backslash
+mathcal{R}$.
+ In this case, n=3.
+ 
+\backslash
+
+\backslash
+ 
+\backslash
+begin{align} 
+\backslash
+pr{X=0} &= 
+\backslash
+frac{2^{n^{2}-n}}{2^{n^{2}}} 
+\backslash
+nonumber
+\backslash
+
+\backslash
+ &= 
+\backslash
+frac{2^{6}}{2^{9}}
+\backslash
+
+\backslash
+ 
+\backslash
+therefore 
+\backslash
+text{ Answer }= 
+\backslash
+frac{1}{8} 
+\backslash
+end{align}
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+end{document}
+\end_layout
+
+\end_body
+\end_document
