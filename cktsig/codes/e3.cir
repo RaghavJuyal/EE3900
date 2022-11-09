@@ -1,0 +1,23 @@
+* Output After   Switching
+
+R1  X    0    1
+
+C1  X    0    1u    ic=1.33
+
+R2  X    3    2
+
+V2  3    0    2
+
+
+.control
+tran    100n    10u    uic
+
+run
+wrdata    e3.txt    v(X)
+set color0 = white
+set color1 = black
+plot  v(X)
+hardcopy ../figs/e3.pdf v(X)
+.endc
+
+.end
